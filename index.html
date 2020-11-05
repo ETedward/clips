@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Portfolio</title>
+    <meta property="og:image" content="preview.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gkx8zdh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mhl8zjo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div id="navbar" class="topnav">
+  <p class="name-logo"><a class="logo-link" href="index.html" style="font-family: minion-pro; font-size: 24px; margin-top: 0px; padding-top: 0px">Edward Tian <span class="short-title" style="font-family: sofia-pro; font-weight: 600"> | Portfolio </span></a></p>
+  <div class="topnav-right">
+    <a href="digital.html">Digital Resume</a>
+    <a href="clips.html">Clips</a>
+    <a href="code.html">Code</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expandMenu()">&#9776;</a>
+  </div>
+  </div>
+    <img src="Lifestyle_BG.png" style="margin: 0px; width: 100vw">
+    <div id="title-page">
+    <div class="centered" style="position: absolute;top: 10%;margin-left: 50%;margin-right:5%; line-height: 1;">
+    <h1 id="title" style="color: rgb(53,100,161);"> Hello! </h1>
+    <h2 id="byline" style="color: rgb(53,100,161);"> <b> I'm Edward </b>Welcome <br> to my Portfolio Site ;)</h2>
+
+ </h2>
+    </div> <!-- class="centered" -->
+    </div> <!-- id = "title-page" -->
+
+    <h1 id="title-mobile""> Hello! </h1>
+    <h2 id="subtitle-mobile"> Welcome to my Portfolio Site! </h2>
+    <div class="intro">
+    <p> About Me: I am a Princeton student exploring the intersections of CS and journalism. Building powerful graphics and site visualizations</p>
+    </div>
+
+    
+</div>
+
+    <div class="center-box" data-aos="fade-up">
+      <iframe title="Fake IDs by International Status" aria-label="chart" id="datawrapper-chart-HLbdK" src="https://datawrapper.dwcdn.net/HLbdK/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+</script>
+<p>
+Six percent of respondents indicated they possessed a fake ID. New Jersey <a href="https://law.justia.com/codes/new-jersey/2013/title-2c/section-2c-21-2.1/">classifies</a> possession of a false government document as a “crime of the fourth degree” — the lowest-grade felony — unless the ID is used solely to illegally purchase alcohol, tobacco, or another age-restricted product, a violation that the state dubs a “disorderly persons offense.” As <a href="https://www.who.int/substance_abuse/publications/en/Alcohol%20Policy%20Report.pdf">most countries</a> outside the United States allow 18-year-olds to drink, just three international respondents owned fake IDs.
+</p>
+</div>
+
+
+
+    <div class="intro">
+    <p> Want to learn more about me? Check out my <a href="digital.html">Digital Resume</a>.</p>
+    <p> Continue browsing the portfolio <a href="code.html">Code</a> and <a href="clips.html">Clips</a>.</p>
+    </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+
+      // You can also pass an optional settings object
+      // below listed default settings
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 300, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 600, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+      });
+    </script>
+
+    <script>
+function expandMenu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if ($(window).width() > 600) {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+  }
+}
+</script>
+  </body>
+</html>
